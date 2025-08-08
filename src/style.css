@@ -1858,3 +1858,52 @@ footer {
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
+
+header {
+  position: fixed; /* para fixar no topo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* para ficar sobre os outros elementos */
+  margin: 0; /* garantir sem margem */
+  padding: 0 20px; /* padding lateral, se quiser */
+  background-color: var(--bg); /* ou a cor do seu header */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* sombra opcional */
+}
+
+/* Se você tem um container com padding-top para não esconder conteúdo atrás do header */
+.scroll-container {
+  padding-top: 80px; /* ou a altura exata do seu header */
+}
+.hero {
+  margin-top: 50px; /* se quiser o header coladinho, remova ou diminua */
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+header {
+  margin: 0; /* remove qualquer margem externa */
+  padding: /* ajuste se quiser apenas espaçamento interno (dentro do header) */;
+}
+header {
+  position: sticky;
+  top: 0;
+}
+header {
+  position: fixed;  /* fixa o header no topo */
+  top: 0;           /* topo da tela */
+  left: 0;
+  width: 100%;      /* ocupar toda a largura */
+  z-index: 1000;    /* garantir que fique na frente */
+  margin: 0;        /* remover qualquer margem */
+  padding: 20px;    /* espaçamento interno, ajuste como quiser */
+  background-color: var(--bg); /* cor de fundo para evitar transparência */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* sombra opcional para destaque */
+  display: flex;    /* para organizar conteúdo interno */
+  align-items: center;
+  justify-content: space-between; /* exemplo para separar logo e menu */
+}

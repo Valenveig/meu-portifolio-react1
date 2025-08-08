@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Sobre from "./components/Sobre";
@@ -12,39 +10,36 @@ import ParticulasBG from "./components/ParticulasBG";
 import Toast from "./components/Toast";
 import useScrollSuave from "./hooks/useScrollSuave";
 import useAnimacoesEntrada from "./hooks/useAnimacoesEntrada";
+import './style.css';
+
 
 function App() {
   useScrollSuave();
   useAnimacoesEntrada();
 
   useEffect(() => {
+    // Remove o tema claro e garante que o escuro esteja ativo
     document.body.classList.remove("claro");
     localStorage.setItem("tema", "escuro");
   }, []);
 
   return (
-    <BrowserRouter basename="/meu-portifolio-react1/">
+    <>
       <ParticulasBG />
       <div className="scroll-container">
         <Header />
-        {/* Você pode ter rotas aqui para diferentes páginas */}
-        <Routes>
-          <Route path="/" element={
-            <>
-              <Hero />
-              <Sobre />
-              <Conhecimentos />
-              <Projetos />
-              <Contato />
-            </>
-          } />
-          {/* Exemplo de outra rota */}
-          {/* <Route path="/outra-pagina" element={<OutraPagina />} /> */}
-        </Routes>
+        {/* ToggleTema removido */}
+
+        <Hero />
+        <Sobre />
+        <Conhecimentos />
+        <Projetos />
+        <Contato />
+
         <Footer />
         <Toast />
       </div>
-    </BrowserRouter>
+    </>
   );
 }
 
