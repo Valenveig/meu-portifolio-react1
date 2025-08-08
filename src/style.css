@@ -133,7 +133,7 @@ section:nth-of-type(even) {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  margin-top: 50px;
+  
 }
 
 .hero h2 {
@@ -1861,7 +1861,7 @@ footer {
 
 header {
   position: fixed; /* para fixar no topo */
-  top: 0;
+  top: 20px;
   left: 0;
   width: 100%;
   z-index: 1000; /* para ficar sobre os outros elementos */
@@ -1876,12 +1876,12 @@ header {
   padding-top: 80px; /* ou a altura exata do seu header */
 }
 .hero {
-  margin-top: 50px; /* se quiser o header coladinho, remova ou diminua */
+  margin-top: 10px; /* se quiser o header coladinho, remova ou diminua */
 }
 /* HEADER FIXO NO TOPO */
 header {
   position: fixed;        /* fixa o header no topo */
-  top: 0;                 /* topo da tela */
+  top: 10;                 /* topo da tela */
   left: 0;
   width: 100%;            /* ocupa toda a largura */
   z-index: 1000;          /* fica na frente de outros elementos */
@@ -1926,3 +1926,19 @@ header {
 
 /* OUTRAS REGRAS EXISTENTES MANTIDAS, SEM ALTERAÇÃO */
 
+.topo {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: var(--bg);
+  padding: 1rem 2rem;
+}
+
+.hero {
+  padding-top: 100px; /* espaço para o header fixo */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

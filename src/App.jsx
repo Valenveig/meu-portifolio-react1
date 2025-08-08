@@ -10,7 +10,7 @@ import ParticulasBG from "./components/ParticulasBG";
 import Toast from "./components/Toast";
 import useScrollSuave from "./hooks/useScrollSuave";
 import useAnimacoesEntrada from "./hooks/useAnimacoesEntrada";
-import './style.css';
+<link rel="stylesheet" href="/meu-portifolio-react1/style.css" />
 
 
 function App() {
