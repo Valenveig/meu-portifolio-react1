@@ -133,6 +133,7 @@ section:nth-of-type(even) {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  margin-top: 50px;
 }
 
 .hero h2 {
@@ -1772,3 +1773,88 @@ body.claro {
   }
 }
 
+.hero {
+  margin-top: 50px; /* ajuste conforme necessário */
+}
+
+.scroll-container {
+  padding-top: 80px; /* por exemplo, se houver um header fixo */
+}
+
+.scroll-container {
+  width: 100%;
+  min-height: 100vh;
+  /* overflow-y: auto; // opcional, só se quiser scroll interno */
+  padding-top: 80px; /* adiciona espaço para não ficar encostado no topo fixo */
+}
+
+.scroll-container > section {
+  min-height: calc(100vh - 80px); /* considera o topo fixo na altura da tela */
+  scroll-snap-align: start;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* height: 100%; */
+  min-height: calc(100vh - 80px); /* usa toda a altura restante corretamente */
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.foto-apresentacao {
+  max-width: 250px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Outros estilos existentes sem remoções desnecessárias */
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+}
+
+/* Aqui estão mantendo os estilos já definidos para a .texto-apresentacao */
+.texto-apresentacao {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.texto-apresentacao > * {
+  margin-bottom: 16px;
+}
+
+/* Footer e topo fixo intactos */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(18, 18, 18, 0.5);
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.topo {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: var(--bg);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
