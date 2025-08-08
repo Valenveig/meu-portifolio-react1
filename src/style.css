@@ -133,7 +133,7 @@ section:nth-of-type(even) {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  
+  margin-top: 50px;
 }
 
 .hero h2 {
@@ -1861,7 +1861,7 @@ footer {
 
 header {
   position: fixed; /* para fixar no topo */
-  top: 20px;
+  top: 0;
   left: 0;
   width: 100%;
   z-index: 1000; /* para ficar sobre os outros elementos */
@@ -1876,12 +1876,11 @@ header {
   padding-top: 80px; /* ou a altura exata do seu header */
 }
 .hero {
-  margin-top: 10px; /* se quiser o header coladinho, remova ou diminua */
-}
+  margin-top: 50px;} /* se quiser o header coladinho, remova ou diminua */
 /* HEADER FIXO NO TOPO */
 header {
   position: fixed;        /* fixa o header no topo */
-  top: 10;                 /* topo da tela */
+  top: 0;                 /* topo da tela */
   left: 0;
   width: 100%;            /* ocupa toda a largura */
   z-index: 1000;          /* fica na frente de outros elementos */
@@ -1926,19 +1925,87 @@ header {
 
 /* OUTRAS REGRAS EXISTENTES MANTIDAS, SEM ALTERAÇÃO */
 
-.topo {
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header {
   position: fixed;
-  top: 0;
+  top: 0; left: 0;
   width: 100%;
-  z-index: 999;
+  height: 80px;
   background-color: var(--bg);
-  padding: 1rem 2rem;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.scroll-container {
+  padding-top: 80px;
+}
+
+.scroll-container > section {
+  min-height: calc(100vh - 80px);
+  scroll-snap-align: start;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero {
-  padding-top: 100px; /* espaço para o header fixo */
-  min-height: 100vh;
+  height: 100%;
+  text-align: center;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  gap: 20px;
+  /* margin-top: 50px;  <-- Remover essa linha */
+}
+header.topo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--bg); /* ou qualquer cor de fundo */
+  z-index: 1000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+main {
+  margin-top: 80px; /* ou o valor da altura do seu header */
+}
+.topo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--bg);
+  color: var(--text);
+  z-index: 1000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Mantém o fundo atrás dos outros elementos */
+  pointer-events: none; /* Impede que interfira com cliques */
+}
+
+section {
+  background-color: rgba(18, 18, 18, 0.9); /* fundo escuro com transparência */
 }
