@@ -828,7 +828,41 @@ body.claro {
   .menu-completo.ativo {
     display: flex;
   }
+
+    .container-competencias {
+    display: flex;
+    flex-direction: column; /* empilha texto e cards */
+    gap: 20px;
+  }
+
+  .texto-explicativo {
+    position: relative;
+    z-index: 10; /* fica acima dos cards */
+    width: 100%;
+  }
+
+  .cards {
+    justify-content: flex-start; /* ou space-around, se preferir */
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 100%; /* ocupa toda a largura do container no mobile */
+    margin-bottom: 10px;
+  }
+
+  .cards-conhecimentos {
+    gap: 20px;
+    width: 100%;
+  }
+
+  .card-conhecimentos {
+    width: 80px;
+    height: 100px;
+  }
 }
+
 
 @media (max-width: 400px) {
   .topo {
@@ -2008,4 +2042,14 @@ main {
 
 section {
   background-color: rgba(18, 18, 18, 0.9); /* fundo escuro com transparência */
+}
+
+.competencias-texto {
+  position: relative; /* para poder usar z-index */
+  z-index: 10; /* um valor maior que o card */
+}
+
+.competencias-card {
+  position: relative;
+  z-index: 5; /* menor que o texto */
 }
