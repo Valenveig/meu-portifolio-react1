@@ -1,12 +1,66 @@
-# React + Vite
+# Portfólio ValenGardd
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o portfólio pessoal de **ValenGardd**, desenvolvido com **React** e **Vite**. O projeto tem como objetivo apresentar meus trabalhos, projetos e habilidades em design e desenvolvimento web.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+- [React](https://reactjs.org/) - Biblioteca JavaScript para construção de interfaces.
+- [Vite](https://vitejs.dev/) - Ferramenta de build rápida e moderna.
+- CSS customizado para estilização, utilizando variáveis CSS e design responsivo.
+- React Icons para ícones e elementos visuais.
+- React Datepicker (em alguns componentes de formulário) para seleção de datas.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Funcionalidades
+
+- **Seção Hero**: Apresentação inicial com destaque para identidade visual.
+- **Seção Projetos**: Lista de projetos com miniaturas, descrições e links externos.
+- **Seção Conhecimentos**: Apresentação das habilidades em front-end e design.
+- **Formulário de Contato**: Permite envio de mensagens, com validação básica.
+- **Footer**: Informações de contato e redes sociais.
+
+---
+
+## Próximos Passos
+
+- **Melhorar a organização do código**: Refatorar componentes e criar arquivos separados para dados e assets.
+- Tornar o projeto mais escalável e modular.
+- Implementar testes e otimizações de performance.
+- Adicionar mais projetos e recursos interativos.
+
+---
+
+## Instalação e Execução
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/seu-portifolio.git
+
+
+Entre na pasta do projeto:
+
+cd seu-portifolio
+
+
+Instale as dependências:
+
+npm install
+
+
+Rode o projeto em modo de desenvolvimento:
+
+npm run dev
+
+
+Abra o endereço mostrado no terminal (geralmente http://localhost:5173) no seu navegador.
+
+Contribuição
+
+Este projeto está em constante evolução. Sugestões de melhorias, correções e novos recursos são bem-vindas.
+
+Licença
+
+Projeto pessoal – sem licença específica.
