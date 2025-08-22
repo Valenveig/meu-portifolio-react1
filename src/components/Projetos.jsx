@@ -1,39 +1,62 @@
 import React from 'react';
-import formularioThumb from '../assets/formulario-screenshot.png'; // Importa imagem da pasta assets
+import formularioThumb from '../assets/formulario-screenshot.png'; // Projeto 1
+import novoProjetoThumb from '../assets/hypersound.png'; // Projeto 2
 
 function Projetos() {
-  function abrirModal(id) {
-    // Abre o link em nova aba ao clicar no card
-    window.open("https://valenveig.github.io/formulario-satisfacao/index.html", "_blank");
+  function abrirProjeto(url) {
+    window.open(url, "_blank");
   }
+
+  const projetos = [
+    {
+      titulo: "Projeto 1",
+      descricao: "Formulário de Satisfação Império Laser.",
+      url: "https://valenveig.github.io/formulario-satisfacao/index.html",
+      imagem: formularioThumb,
+      ariaLabel: "Abrir detalhes do Projeto 1"
+    },
+    {
+      titulo: "Projeto 2",
+      descricao: " Projeto fictício de landing para apresentação de um produto.",
+      url: "https://landing-produto.vercel.app",
+      imagem: novoProjetoThumb,
+      ariaLabel: "Abrir detalhes do Projeto 2"
+    }
+  ];
 
   return (
     <section className="projetos fade" id="projetos">
-      <div className="container cards">
-        <div
-          className="card"
-          tabIndex="0"
-          role="button"
-          aria-label="Abrir detalhes do Projeto 1"
-          onClick={() => abrirModal(1)}
-          onKeyPress={e => e.key === 'Enter' && abrirModal(1)}
-        >
-          <img 
-            src={formularioThumb} 
-            alt="Miniatura do Formulário de Satisfação Império Laser" 
-            className="miniatura-projeto"
-          />
-          <h3>Projeto 1</h3>
-          <p>Formulário de Satisfação Império Laser.</p>
-          <a
-            href="https://valenveig.github.io/formulario-satisfacao/index.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="link-externo"
-            aria-label="Ver Projeto 1 no GitHub"
-          >
-            
-          </a>
+      <div className="container">
+        <h2 id="titulo-projetos">Projetos</h2>
+        <div className="cards">
+          {projetos.map((projeto, index) => (
+            <div
+              key={index}
+              className="card"
+              tabIndex="0"
+              role="button"
+              aria-label={projeto.ariaLabel}
+              onClick={() => abrirProjeto(projeto.url)}
+              onKeyDown={e => e.key === 'Enter' && abrirProjeto(projeto.url)}
+            >
+              <img
+                src={projeto.imagem}
+                alt={`Miniatura do ${projeto.titulo}`}
+                className="miniatura-projeto"
+              />
+              <h3>{projeto.titulo}</h3>
+              <p>{projeto.descricao}</p>
+              <a
+                href={projeto.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-externo"
+                aria-label={`Ver ${projeto.titulo}`}
+              >
+                🔗 Ver Projeto
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </section>

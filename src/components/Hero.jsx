@@ -16,7 +16,7 @@ function Hero() {
             </a>
 
             <a
-              href="https://wa.me/5511999999999"
+              href="https://wa.me/5532998424917"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-secundario whatsapp-btn"

@@ -2053,3 +2053,11 @@ section {
   position: relative;
   z-index: 5; /* menor que o texto */
 }
+
+.form-contato form {
+  padding-bottom: 120px; /* ajusta conforme a altura do footer */
+}
+
+footer {
+  position: static; /* ou static */
+}
